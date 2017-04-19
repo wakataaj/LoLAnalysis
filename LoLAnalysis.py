@@ -14,10 +14,6 @@ import numpy as np
 df = pd.read_csv('../Desktop/leagueoflegends/_LeagueofLegends.csv')
 
 LoL_teams = df[['Year','blueTeamTag','bResult','rResult']]
-#print(type(LoL_teams['blueTeamTag']))
-
-#print(LoL['redTeamTag'].value_counts()) #How many times each team has played red side
-#print(LoL['blueTeamTag'].value_counts()) #How many times each team has played blue sid
       
 # C9 Analysis
 Team = 'C9'
