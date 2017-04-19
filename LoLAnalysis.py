@@ -13,7 +13,8 @@ import numpy as np
 
 df = pd.read_csv('../Desktop/leagueoflegends/_LeagueofLegends.csv')
 
-LoL_teams = df[['Year','blueTeamTag','bResult','rResult']]
+df.describe()
+df.head()
       
 # C9 Analysis
 Team = 'C9'
@@ -42,11 +43,13 @@ C9_avg_game_length = C9['gamelength'].mean() #C9 avg win time both sides combine
 # North America Analysis for 2017
 Region = 'North_America'
 LoL_NA = df.loc[df['League'] == Region]
-
-
 LoL_NA_17 = LoL_NA.loc[LoL_NA['Year'] == 2017]
 
+LoL_NA_17.describe()
+LoL_NA_17.head()
+
 Long_game_df17 = LoL_NA_17[LoL_NA_17['gamelength'] >= 40]
+Long_game_df17.value_counts()
 
 avg_game_time17 = LoL_NA_17['gamelength'].mean()
 print(LoL_NA_17.describe()) # Avg gamelength is 37.72 minutes, longest is 67 minutes, shortest is 25 minutes
