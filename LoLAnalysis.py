@@ -49,7 +49,6 @@ LoL_NA_17.describe()
 LoL_NA_17.head()
 
 Long_game_df17 = LoL_NA_17[LoL_NA_17['gamelength'] >= 40]
-Long_game_df17.value_counts()
 
 avg_game_time17 = LoL_NA_17['gamelength'].mean()
 print(LoL_NA_17.describe()) # Avg gamelength is 37.72 minutes, longest is 67 minutes, shortest is 25 minutes
